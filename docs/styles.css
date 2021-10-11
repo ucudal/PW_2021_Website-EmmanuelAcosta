@@ -23,7 +23,7 @@
   display: block;
 }
 
-body {
+.diff {
   background-color: #e2e8f0
 }
 
@@ -31,4 +31,62 @@ img{
   height: 150px;
   width: 150px;
   display: block;
+}
+
+
+@media(max-width:400px){
+  .box1{
+    text-align: left;
+    color: rebeccapurple;
+  }
+}
+
+@media(min-width:900px){
+   .box1{
+     text-align: right;
+     color:antiquewhite;
+   } 
+}
+
+@media(min-width:401px)and(max-width:899px){
+  .box1{
+    text-align: center;
+    color: tomato;
+  }
+}
+
+.bg-first-color { 
+	background: #394a51; 
+}
+	
+.bg-second-color { 
+	background: #7fa99b; 
+}
+
+.bg-third-color { 
+	background: #fbf2d5; 
+}
+
+.bg-fourth-color { 
+	background: #fdc57b; 
+}
+
+.first-color { 
+  --tw-text-opacity: 1;
+	color: #394a51; 
+}
+	
+.second-color { 
+  --tw-text-opacity: 1;
+	color: #7fa99b; 
+}
+
+.third-color { 
+  --tw-text-opacity: 1;
+	color: #fbf2d5; 
+}
+
+.fourth-color { 
+  --tw-text-opacity: 1;
+	background: #fdc57b; 
 }
