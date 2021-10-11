@@ -1,3 +1,4 @@
+
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -35,23 +36,29 @@ img{
 
 
 @media(max-width:400px){
-  .box1{
-    text-align: left;
-    color: rebeccapurple;
+  body{
+    font-size: 50%;
+  }
+  p{
+    font-size: 50%;
   }
 }
 
 @media(min-width:900px){
-   .box1{
-     text-align: right;
-     color:antiquewhite;
-   } 
+   body{
+     font-size: 100%;
+   }
+   p{
+     font-size: 100%;
+   }
 }
 
 @media(min-width:401px)and(max-width:899px){
-  .box1{
-    text-align: center;
-    color: tomato;
+  body{
+    font-size: 75%;
+  }
+  p{
+    font-size: 75%;
   }
 }
 
@@ -89,4 +96,10 @@ img{
 .fourth-color { 
   --tw-text-opacity: 1;
 	background: #fdc57b; 
+}
+
+
+
+body{
+
 }
