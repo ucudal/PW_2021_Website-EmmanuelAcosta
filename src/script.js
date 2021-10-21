@@ -58,4 +58,6 @@ function abrirModal() {
   modal?.classList.remove("esconder-modal");
 }
 
-function limpiarCampos() {}
+function limpiarCampos() {
+    console.log("CAMPOS A LIMPIAR")
+}
