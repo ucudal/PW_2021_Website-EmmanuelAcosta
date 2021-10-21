@@ -11,11 +11,30 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
-  <header class="bg-fourth-color w-full bg-grey-lighter py-8 mt-2 mb-2">
-    <p class="flex items-center justify-center text-4xl">¡Bienvenido a mi Curriculum Vitae!</p>
+  <!-- Bienvenida y contact me-->
+
+  <header class="flex bg-fourth-color w-full bg-grey-lighter py-8 mt-2 mb-2 items-center">
+    <div class="w-1/2">
+      <p class="flex items-center justify-center text-4xl">¡Bienvenido a mi Curriculum Vitae!</p>
+    </div>
+    <div class="w-1/2">
+      <!-- CONTACTO -->
+      <div class="w-full text-center mx-auto mt-5 p-7">
+        <p class="text-4xl">
+          ¡Click aquí para contactarme!
+        </p>
+        <button
+          class="bg-green-500 text-white rounded-md px-8 py-2 text-base font-medium hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300"
+          id="open-btn">
+          Contact Me
+        </button>
+      </div>
+    </div>
   </header>
   <div class="flex justify-center antialiased">
+    <!-- FOTO Y DATOS DE ESTUDIO -->
     <div class="bg-third-color w-1/2 p-10">
       <div class="flex items-center justify-center mb-10">
         <img src="img/FotoCV2.jpg" alt="Fotografía de curriculum vitae" title="Fotografía de curriculum vitae"
@@ -50,7 +69,7 @@
       </ul>
     </div>
 
-
+    <!-- EXPERIENCIA LABORAL  -->
     <div class="bg-second-color w-1/2 ml-2 rounded-10 p-10">
       <h1 class="text-gray-600">“Desarrollador de software actualmente en Atos. Utilizando tecnologías como SpringBoot,
         Angular, React Native etc...”</h1>
@@ -99,86 +118,94 @@
 
     </div>
 
+
   </div>
-  <form id="formulario" name="formulario">
-    <div class="bg-first-color font-sans bg-grey-lightest mt-2 p-10">
-      <div class="bg-grey-lightest p-10">
-        <div class="container mx-auto py-8">
-          <div class="bg-white rounded shadow p-5">
-            <div class="container mx-auto py-8">
-              <div class="bg-white rounded shadow p-5">
-                <div class="py-4 px-8 text-black text-xl text-center border-b border-grey-lighter">Regístrate</div>
-                <div class="py-4 px-8">
-                  <div class="flex mb-4">
-                    <div class="w-1/2 mr-1">
-                      <label class="block text-grey-darker text-lg font-bold m-2" for="nombre">Nombre</label>
-                      <input class="appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="nombre"
-                        type="text" placeholder="Tu nombre">
+  <!-- MODAL  -->
+  <article id="modal-formulario" class="modal">
+
+    <!-- Formulario de contact modal -->
+    <form id="formulario" name="formulario">
+
+      <div>
+        <div>
+          <button id="close-btn">Cerrar</button>
+        </div>
+        <div class="bg-grey-lightest p-10">
+          <div class="container mx-auto py-8">
+            <div class="bg-white rounded shadow p-5">
+              <div class="container mx-auto py-8">
+                <div class="bg-white rounded shadow p-5">
+                  <div class="py-4 px-8 text-black text-xl text-center border-b border-grey-lighter">Regístrate</div>
+                  <div class="py-4 px-8">
+                    <div class="flex mb-4">
+                      <div class="w-1/2 mr-1">
+                        <label class="block text-grey-darker text-lg font-bold m-2" for="nombre">Nombre</label>
+                        <input class="appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="nombre"
+                          type="text" placeholder="Tu nombre">
+                      </div>
+                      <div class="w-1/2 ml-1">
+                        <label class="block text-grey-darker text-lg font-bold m-2" for="apellido">Apellido</label>
+                        <input class="appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="apellido"
+                          type="text" placeholder="Tu apellido">
+                      </div>
                     </div>
-                    <div class="w-1/2 ml-1">
-                      <label class="block text-grey-darker text-lg font-bold m-2" for="apellido">Apellido</label>
-                      <input class="appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="apellido"
-                        type="text" placeholder="Tu apellido">
+                    <div class="flex mb-4">
+                      <div class="w-1/2 mr-1">
+                        <label class="block text-grey-darker text-lg font-bold m-2" for="email">Correo
+                          electrónico</label>
+                        <input class="appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="email"
+                          type="email" placeholder="Correo electrónico" required>
+                      </div>
+                      <div class="w-1/2 ml-1">
+                        <label class="block text-grey-darker text-lg font-bold m-2" for="pais">País</label>
+                        <input class="appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="pais"
+                          type="text" placeholder="País" required>
+                      </div>
                     </div>
-                  </div>
-                  <div class="flex mb-4">
-                    <div class="w-1/2 mr-1">
-                      <label class="block text-grey-darker text-lg font-bold m-2" for="email">Correo electrónico</label>
-                      <input class="appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="email"
-                        type="email" placeholder="Correo electrónico" required>
+                    <div class="mb-4">
+                      <label class="block text-grey-darker text-lg font-bold m-2" for="comentarios">Comentarios</label>
+                      <textarea class="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+                        id="comentarios" type="text" placeholder="¡Déjame saber tus opiniones!"></textarea>
                     </div>
-                    <div class="w-1/2 ml-1">
-                      <label class="block text-grey-darker text-lg font-bold m-2" for="pais">País</label>
-                      <input class="appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="pais"
-                        type="text" placeholder="País" required>
+
+                    <div class="mb-4">
+                      <label class="block text-grey-darker text-lg font-bold m-2" for="empresa">¿De que empresa
+                        provienes?</label>
+                      <input class="appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="empresa"
+                        type="text" placeholder="Pon tu empresa" required>
+                      <p class="text-grey text-lg mt-1 text-center">Puede ser anónimo 😝</p>
                     </div>
-                  </div>
-                  <div class="mb-4">
-                    <label class="block text-grey-darker text-lg font-bold m-2" for="comentarios">Comentarios</label>
-                    <textarea class="appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="comentarios"
-                      type="text" placeholder="¡Déjame saber tus opiniones!"></textarea>
+
                   </div>
 
-                  <div class="mb-4">
-                    <label class="block text-grey-darker text-lg font-bold m-2" for="empresa">¿De que empresa
-                      provienes?</label>
-                    <input class="appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="empresa"
-                      type="text" placeholder="Pon tu empresa" required>
-                    <p class="text-grey text-lg mt-1 text-center">Puede ser anónimo 😝</p>
+                  <div class="flex items-center justify-center">
+                    <button onclick="agregarPersona()"
+                      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                      <p>Registrarse</p>
+                    </button>
+                    <button onclick="mostrarPersonas()"
+                      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-2">
+                      <p>Mostrar personas</p>
+                    </button>
+
+
+
                   </div>
-
-                </div>
-
-                <div class="flex items-center justify-center">
-                  <button onclick="agregarPersona()"
-                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    <p>Registrarse</p>
-                  </button>
-                  <button onclick="mostrarPersonas()"
-                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-2">
-                    <p>Mostrar personas</p>
-                  </button>
-
-
-
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </form>
-  </div>
+    </form>
+  </article>
 
 
-
-
-
+  <!-- PIE DE PAGINA -->
   <footer class="bg-fourth-color w-full bg-grey-lighter py-8 mt-2">
     <p class="flex items-center justify-center text-4xl">¡Muchas gracias por visitarme!</p>
   </footer>
-  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="script.min.js"></script>
 </body>
 
 </html>
