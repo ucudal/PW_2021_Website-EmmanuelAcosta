@@ -8,8 +8,8 @@
     "start": "browser-sync start --server --serveStatic 'docs' --files '**/*'",
     "tailwind": "npx tailwindcss -i ./src/tailwind.css -o ./docs/style.css --jit",
     "tailwind:watch": "npm run tailwind -- --watch",
-    "uglify": "npx uglify-js src/script.js -o docs/script.min.js --source-map",
-    "build": "tsc src/script.ts"
+    "uglify": "npx uglify-js src/script.js -o docs/script.min.js & npx uglify-js src/apis.js -o docs/apis.min.js --source-map",
+    "build": "npx tsc src/script.ts"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,6 @@
     "autoprefixer": "^10.3.7",
     "postcss": "^8.3.10",
     "tailwindcss": "^2.2.17",
-    "typescript": "^4.4.4"
+    "typescript": "^4.5.2"
   }
 }
