@@ -63,19 +63,19 @@ img{
 }
 
 .bg-first-color { 
-	background: #394a51; 
+	background: #faf6e9; 
 }
 	
 .bg-second-color { 
-	background: #7fa99b; 
+	background: #ece8d9; 
 }
 
 .bg-third-color { 
-	background: #fbf2d5; 
+	background: #fffdf6; 
 }
 
 .bg-fourth-color { 
-	background: #fdc57b; 
+	background: #494949; 
 }
 
 .first-color { 
@@ -85,7 +85,7 @@ img{
 	
 .second-color { 
   --tw-text-opacity: 1;
-	color: #7fa99b; 
+	color: #494949; 
 }
 
 .third-color { 
@@ -101,17 +101,54 @@ img{
 
 
 .modal {
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
   position: fixed;
-  left: 0px;
-  top: 0px;
-  height: 100%;
+  left: calc(50%-15rem);
+  top: 20vh;
+  width: 30rem;
+  overflow-y: scroll;
+}
+
+.formulario{
+  position:fixed;
+  z-index:1;
+  background-color: rgba(0,0,0,0.75);
   width: 100%;
-  --tw-bg-opacity: 1;
-  background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
-  --tw-bg-opacity: 0.8;
+  height: 100vh;
+  top:0;
+  left:0;
+  overflow-y: scroll;
 }
 
 
 .esconder-modal {
   visibility: hidden;
+  display: block;
+}
+
+.direccion{
+  display: flex;
+  flex-direction: row;
+}
+
+.tamano{
+  width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="direccion"] {
+    display: flex;
+  flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="tamano"] {
+    width: 100%;
+  }
 }
