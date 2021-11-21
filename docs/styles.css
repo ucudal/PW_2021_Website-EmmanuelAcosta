@@ -37,10 +37,10 @@ img{
 
 @media(max-width:400px){
   body{
-    font-size: 50%;
+    font-size: 75%;
   }
   p{
-    font-size: 50%;
+    font-size: 75%;
   }
 }
 
