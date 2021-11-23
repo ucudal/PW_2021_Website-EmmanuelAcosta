@@ -4,7 +4,7 @@ let emailSc = document.getElementById("email");
 let paisSc = document.getElementById("pais");
 let comentariosSc = document.getElementById("comentarios");
 var form = document.getElementById("formulario");
-function handleForm(event) {
+function handleForm(event: any) {
   event.preventDefault();
 }
 if (form != null) {
@@ -40,9 +40,11 @@ function abrirModal() {
 }
 
 function limpiarCampos() {
-  nombreSc.value = "";
-  apellidoSc.value = "";
-  comentariosSc.value = "";
-  emailSc.value = "";
-  paisSc.value = "";
+  if (nombreSc != null && apellidoSc != null && comentariosSc != null && emailSc != null && paisSc != null) {
+    nombreSc.value = "";
+    apellidoSc.value = "";
+    comentariosSc.value = "";
+    emailSc.value = "";
+    paisSc.value = "";
+  }
 }
